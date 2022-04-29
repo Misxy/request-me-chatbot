@@ -15,6 +15,9 @@ app = Flask(__name__)
 line_bot_api = LineBotApi('ZWlPACsngCuhH5mKYaaMClbUESPVL/vMvtGgTMZnfu9+oiYB7XVSBCrXTsL05cPxQr+pc579NoPQVTYc7/RXzZHsCjao/RmkFhgrMESrBamzZF8tYM3E+K/b+hCZAtEWVKIikh8OxTi42rt7UFqhzAdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('478fec36cf611b6d38a1fc648828534f')
 
+@app.route('/')
+def hello():
+    return "Hello Flask-Heroku"
 
 @app.route("/callback", methods=['POST'])
 def callback():
